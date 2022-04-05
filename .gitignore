@@ -1,2 +1,17 @@
 .vscode
 build
+
+
+# build and intermediate
+bin
+bin-int
+
+# vs stuff
+.vs
+*.sln
+*.vcxproj
+*.vcxproj.user
+*.vcxproj.filters
+premake5
+
+Makefile
