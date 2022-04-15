@@ -174,11 +174,16 @@ project "rttr"
     }
 
     includedirs
-	{
-        "src"
-	}
-    
-	filter "system:windows"
+    {
+		"src"
+    }
+
+    defines
+    {
+		"NOMINMAX"   
+    }
+
+    filter "system:windows"
 		cppdialect "C++11"
 		staticruntime "on"
 		systemversion "latest"
