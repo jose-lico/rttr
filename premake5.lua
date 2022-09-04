@@ -1,6 +1,6 @@
 project "rttr"
   	kind "StaticLib"
-	  configmap {
+	configmap {
         ["ReleaseNoImGui"] = "Release"
     }
 
