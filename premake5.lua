@@ -1,9 +1,11 @@
 project "rttr"
-    kind "StaticLib"
-    language "C++"
-    
-	targetdir ("bin/" .. outputDir .. "/%{prj.name}")
-	objdir ("bin-int/" .. outputDir .. "/%{prj.name}")
+  	kind "StaticLib"
+	  configmap {
+        ["ReleaseNoImGui"] = "Release"
+    }
+
+	targetdir ("%{wks.location}/bin/" .. outputDir .. "/%{prj.name}")
+	objdir ("%{wks.location}/bin-int/" .. outputDir .. "/%{prj.name}")
     
     files
     {
@@ -197,9 +199,5 @@ project "rttr"
 		symbols "On"
 	
 	filter "configurations:Release"
-		runtime "Release"
-		optimize "On"
-
-	filter "configurations:MinSizeRelease"
 		runtime "Release"
 		optimize "On"
