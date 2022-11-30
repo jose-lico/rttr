@@ -190,7 +190,7 @@ project "rttr"
 
 	filter "system:windows"
 		cppdialect "C++11"
-		staticruntime "on"
+		staticruntime "On"
 		systemversion "latest"
 
 	filter "system:linux"
